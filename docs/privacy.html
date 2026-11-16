@@ -1,33 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HELLO AI — Privacy Notice</title>
-<style>
-body{margin:0;background:#07152d;color:#eef6ff;font:16px/1.7 Arial,sans-serif}
-main{max-width:850px;margin:auto;padding:28px}
-h1,h2{color:#54d9ff}a{color:#54d9ff}
-section{background:#102541;border:1px solid #244666;border-radius:12px;padding:18px;margin:18px 0}
-small{color:#b9c9dc}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07152d">
+  <title>Privacy Notice — HELLO AI</title>
+  <meta name="description" content="Privacy Notice explaining how HELLO AI processes information and uses AI and voice services.">
+  <style>
+    body{margin:0;background:#07152d;color:#e8eef8;font-family:Arial,sans-serif;line-height:1.7}
+    main{max-width:850px;margin:40px auto;padding:24px}
+    h1,h2{color:#55d6e8}
+    a{color:#55d6e8}
+    small{color:#aab8ca}
+    section{margin:28px 0}
+    footer{margin-top:40px;border-top:1px solid #29405e;padding-top:20px;color:#aab8ca}
+  </style>
 </head>
-<body><main>
-<p><a href="index.html">← HELLO AI Home</a></p>
-<h1>HELLO AI — Privacy Notice</h1>
-<p><small>Draft notice · Last updated: November 16, 2026</small></p>
-<p>This notice explains, in general terms, how information may be processed when you use HELLO AI. It must be reviewed and updated to match the actual backend and service-provider settings before public release.</p>
-<section><h2>Information you provide</h2>
-<p>Questions, prompts, images or other content you submit may be sent to the app's backend to provide AI features. Do not submit passwords, financial details or other sensitive personal information.</p></section>
-<section><h2>Voice features</h2>
-<p>If you use voice input or speech features, audio or recognized speech may be processed by your device or the speech services configured in the app. Text-to-speech requests may be sent to the configured speech provider.</p></section>
-<section><h2>Service providers</h2>
-<p>The app code uses Supabase services and AI and speech endpoints to provide features. Information sent to these services may be processed under their respective terms and privacy practices. The exact data retention, logging and deletion settings have not yet been independently confirmed.</p></section>
-<section><h2>Data security and retention</h2>
-<p>Reasonable safeguards should be maintained for the app and its connected services. How long submitted content or technical logs are retained depends on the configured backend and service providers. This notice does not promise that data is never stored or that it is automatically deleted.</p></section>
-<section><h2>Children</h2>
-<p>Parents or guardians should supervise children's use. Do not knowingly submit a child's sensitive personal information.</p></section>
-<section><h2>Contact and questions</h2>
-<p>For questions or support, use the <a href="https://github.com/Mahiiman/Hello-AI/issues">HELLO AI GitHub support page</a>. Avoid posting private or sensitive information in public issues.</p></section>
-<p><strong>Important:</strong> The developer must verify backend logging, AI-provider processing, speech-provider processing, retention and contact details, then revise this draft before treating it as the final privacy policy.</p>
-</main></body></html>
+<body>
+<main>
+  <h1>HELLO AI — Privacy Notice</h1>
+  <small>Last updated: November 16, 2026</small>
+
+  <p>This notice explains how HELLO AI processes information when you use its chat, translation, writing, image generation, voice, and video-subtitle features. Please read it before submitting personal or confidential information.</p>
+
+  <section>
+    <h2>1. Information You Provide</h2>
+    <p>Depending on the features you use, HELLO AI may process text messages, questions, prompts, translation and writing requests, image-generation prompts, recognized speech text, narration text, and video or audio content selected for subtitle generation.</p>
+    <p>Technical information may also be processed by the app, its hosting services, or service providers to operate and protect the service.</p>
+  </section>
+
+  <section>
+    <h2>2. AI Chat, Translation, and Writing</h2>
+    <p>When you use AI chat, translation, or writing features, the relevant text is sent to HELLO AI's Supabase backend function and processed using Google Gemini.</p>
+    <p>The reviewed backend code sets the request option <code>store: false</code>. This describes the request configuration; it is not a guarantee that Google, network providers, or infrastructure providers retain no technical records or data.</p>
+  </section>
+
+  <section>
+    <h2>3. Image Generation</h2>
+    <p>When you request an image, your prompt is sent to a HELLO AI backend function. The function uses AI Horde and may also use Google Gemini to improve the prompt when configured.</p>
+    <p>Do not submit confidential, sensitive, or personal information in image prompts. The privacy and retention practices of these external providers are governed by their own policies.</p>
+  </section>
+
+  <section>
+    <h2>4. Voice Input and Speech</h2>
+    <p>Voice input uses speech-recognition features provided by the browser or device. The reviewed app code processes the resulting recognized text as a message and does not explicitly upload the raw microphone recording to the HELLO AI backend in this flow.</p>
+    <p>However, the browser, operating system, or speech-recognition provider may process voice data under its own privacy terms. Basic spoken playback of AI replies uses browser or device speech-synthesis functionality.</p>
+  </section>
+
+  <section>
+    <h2>5. AI Narration</h2>
+    <p>If you use AI narration, the text and selected voice information are sent to the external TTS.ai service. HELLO AI then checks the narration job and retrieves the resulting audio.</p>
+    <p>Please avoid using this feature with confidential information or personal data that you do not want shared with an external service provider.</p>
+  </section>
+
+  <section>
+    <h2>6. Video Subtitles</h2>
+    <p>The video-subtitle feature uses FFmpeg and a Whisper Tiny speech-recognition model. The model is downloaded from Hugging Face. The reviewed app code processes the selected media and performs transcription in the browser after the model is loaded.</p>
+    <p>Downloading model files and using browser-based processing may involve network requests and technical information handled by the browser, hosting services, or model provider.</p>
+  </section>
+
+  <section>
+    <h2>7. Supabase and Account Information</h2>
+    <p>HELLO AI uses Supabase for backend services and anonymous authentication. You may receive an anonymous authentication session when using the app.</p>
+    <p>At the time of the backend review on November 16, 2026, no app-specific public database tables or files in Supabase Storage were found. Anonymous authentication records and session-related technical records were present.</p>
+    <p>This review does not establish that no server logs, security records, backups, or other technical records exist. Their complete retention periods and deletion procedures have not been verified.</p>
+  </section>
+
+  <section>
+    <h2>8. Service Providers</h2>
+    <p>Depending on the features you use, HELLO AI may rely on the following services:</p>
+    <ul>
+      <li>Supabase — backend services and anonymous authentication.</li>
+      <li>Google Gemini — AI chat, translation, writing, and possible image-prompt improvement.</li>
+      <li>AI Horde — image generation.</li>
+      <li>TTS.ai — AI narration.</li>
+      <li>Hugging Face — hosting model files used for video subtitles.</li>
+      <li>Browser and device providers — speech recognition and speech synthesis.</li>
+    </ul>
+    <p>These providers may process information under their own privacy notices, terms, and retention practices. HELLO AI does not control all of their data-handling practices.</p>
+  </section>
+
+  <section>
+    <h2>9. Data Retention and Deletion</h2>
+    <p>HELLO AI does not promise that all information is automatically deleted immediately after use. Data may remain in provider systems, technical logs, security records, or backups according to the relevant provider's policies and retention settings.</p>
+    <p>A complete deletion process covering HELLO AI infrastructure and every external provider has not been verified. Contact the developer through the support link below for questions or requests. A request to HELLO AI cannot guarantee deletion of copies independently held by external providers.</p>
+  </section>
+
+  <section>
+    <h2>10. Security</h2>
+    <p>Reasonable technical measures are intended to protect the service. However, no internet transmission, application, or storage system can be guaranteed to be completely secure. Avoid submitting passwords, financial details, identity documents, or other highly sensitive information.</p>
+  </section>
+
+  <section>
+    <h2>11. Children</h2>
+    <p>HELLO AI is not intended to knowingly collect personal information from children without appropriate permission where required by applicable law. If you believe a child has submitted personal information, contact the developer.</p>
+  </section>
+
+  <section>
+    <h2>12. Changes to This Notice</h2>
+    <p>This notice may be updated when the app, its features, or its service providers change. The latest version will be published on the HELLO AI website with an updated date.</p>
+  </section>
+
+  <section>
+    <h2>13. Contact and Support</h2>
+    <p>For privacy questions or support, contact the developer through the <a href="https://github.com/Mahiiman/Hello-AI/issues">HELLO AI GitHub support page</a>.</p>
+  </section>
+
+  <footer>
+    <p>HELLO AI — Privacy Notice</p>
+    <p>This notice describes the implementation reviewed on November 16, 2026. Provider-specific retention, complete log retention, and end-to-end deletion procedures have not been independently verified. This notice is not a substitute for legal advice or a formal compliance review.</p>
+  </footer>
+</main>
+</body>
+</html>
