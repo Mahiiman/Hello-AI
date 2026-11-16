@@ -5,40 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#07152d">
 <title>HELLO AI — Your AI Assistant</title>
-<meta name="description" content="HELLO AI: chat with AI, use voice input and listen to replies, with multilingual support.">
+<meta name="description" content="Meet HELLO AI: chat with AI, use voice input, listen to replies and explore multilingual support.">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#07152d;color:#eef6ff;line-height:1.6}
-header,main,footer{max-width:1000px;margin:auto;padding:24px}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#07152d;color:#eef6ff;line-height:1.6}
+header,main,footer{max-width:1100px;margin:auto;padding:24px}
 header{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.logo{font-size:25px;font-weight:bold;color:#54d9ff}
-a{color:#54d9ff}.hero{text-align:center;padding:85px 20px 70px}
-h1{font-size:clamp(38px,7vw,64px);line-height:1.1;margin:10px 0}
-.hero p{font-size:19px;color:#bdcce0;max-width:650px;margin:20px auto}
-.btn{display:inline-block;background:#12bde0;color:#06152b;padding:13px 22px;border-radius:9px;text-decoration:none;font-weight:bold;margin:8px}
+.logo{font-size:27px;font-weight:800;color:#54d9ff;letter-spacing:1px}
+a{color:#54d9ff}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:30px;padding:75px 10px}
+.tag{color:#54d9ff;font-weight:bold;letter-spacing:3px}
+h1{font-size:clamp(40px,7vw,66px);line-height:1.08;margin:15px 0}
+.hero p{font-size:18px;color:#bdcce0;max-width:620px}
+.btn{display:inline-block;background:#12bde0;color:#06152b;padding:14px 23px;border-radius:10px;text-decoration:none;font-weight:bold;margin:8px 8px 8px 0}
 .btn.secondary{background:transparent;border:1px solid #54d9ff;color:#54d9ff}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:35px 0}
-.card{background:#102541;border:1px solid #244666;border-radius:14px;padding:22px}
+.preview{background:linear-gradient(145deg,#12375b,#10213c);border:1px solid #326087;border-radius:25px;padding:28px;text-align:center;box-shadow:0 20px 60px #0006}
+.circle{width:115px;height:115px;margin:10px auto 20px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#12bde0,#745bff);font-size:48px;box-shadow:0 0 45px #12bde066}
+.preview h2{color:#54d9ff}
+.preview p{font-size:15px;color:#bdcce0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:35px 0 55px}
+.card{background:#102541;border:1px solid #244666;border-radius:16px;padding:23px}
 .card h2{color:#54d9ff;font-size:20px}
+.download{text-align:center;background:#102541;border:1px solid #244666;border-radius:18px;padding:35px 20px;margin:30px 0}
+.download h2{font-size:29px}
 footer{border-top:1px solid #244666;color:#aebed1;text-align:center}
+@media(max-width:700px){.hero{grid-template-columns:1fr;text-align:center;padding:45px 5px}.hero p{margin:18px auto}.preview{max-width:430px;margin:auto}header{padding:18px}}
 </style>
 </head>
 <body>
-<header><div class="logo">HELLO AI</div><a href="privacy.html">Privacy Notice</a></header>
+<header>
+<div class="logo">✦ HELLO AI</div>
+<a href="privacy.html">Privacy Notice</a>
+</header>
 <main>
 <section class="hero">
-<p>YOUR AI ASSISTANT</p>
+<div>
+<div class="tag">YOUR AI ASSISTANT</div>
 <h1>Meet your new AI companion.</h1>
 <p>Chat with AI, use your voice, listen to responses and explore multilingual support with HELLO AI.</p>
-<a class="btn" href="https://github.com/Mahiiman/Hello-AI/releases/tag/v1.2">View Android Release</a>
+<a class="btn" href="https://github.com/Mahiiman/Hello-AI/releases/tag/v1.2">Download / View APK</a>
 <a class="btn secondary" href="https://github.com/Mahiiman/Hello-AI">GitHub Project</a>
+</div>
+<div class="preview">
+<div class="circle">✦</div>
+<h2>Hello! I'm HELLO AI.</h2>
+<p>Your AI companion for chatting, voice interaction and multilingual communication.</p>
+</div>
 </section>
+
 <section class="cards">
-<div class="card"><h2>AI Chat</h2><p>Ask questions and receive AI-generated responses.</p></div>
-<div class="card"><h2>Voice Input</h2><p>Use supported voice recognition to communicate with the app.</p></div>
-<div class="card"><h2>Voice Replies</h2><p>Listen to responses using supported text-to-speech features.</p></div>
-<div class="card"><h2>Languages</h2><p>Explore multilingual support, including Afaan Oromoo, English and Amharic.</p></div>
+<div class="card"><h2>✦ AI Chat</h2><p>Ask questions and receive AI-generated responses.</p></div>
+<div class="card"><h2>🎙 Voice Input</h2><p>Use supported voice recognition to communicate with the app.</p></div>
+<div class="card"><h2>🔊 Voice Replies</h2><p>Listen to responses using supported text-to-speech features.</p></div>
+<div class="card"><h2>🌍 Languages</h2><p>Explore multilingual support, including Afaan Oromoo, English and Amharic.</p></div>
+</section>
+
+<section class="download">
+<h2>Ready to meet HELLO AI?</h2>
+<p>Visit the Android release page to view the available app download.</p>
+<a class="btn" href="https://github.com/Mahiiman/Hello-AI/releases/tag/v1.2">Get HELLO AI for Android</a>
 </section>
 </main>
-<footer>HELLO AI · <a href="privacy.html">Privacy Notice</a> · <a href="https://github.com/Mahiiman/Hello-AI/issues">Contact / Support</a></footer>
+<footer>
+<p>HELLO AI · <a href="privacy.html">Privacy Notice</a> · <a href="https://github.com/Mahiiman/Hello-AI/issues">Contact / Support</a></p>
+</footer>
 </body>
 </html>
